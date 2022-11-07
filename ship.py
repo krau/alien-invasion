@@ -29,6 +29,11 @@ class Ship:
 
         self.rect.x = self.x
 
+    def center_ship(self):
+        '''使飞船在底部居中'''
+        self.rect.midbottom = self.screen_rect.midbottom
+        self.x = float(self.rect.x)
+
     def blitem(self):
         '''在指定位置绘制飞船'''
         self.screen.blit(self.image,self.rect)
